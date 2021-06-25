@@ -5,9 +5,9 @@ import Logo from './Components/Logo/Logo.js';
 import Imagelinkform from './Components/Imagelinkform/Imagelinkform.js';
 import Attempts from './Components/Attempts/Attempts.js';
 import Particles from "react-particles-js";
-import Facerecognition from './Components/Facerecognition/Facerecognition';
-import Signin from './Components/Signin/Signin';
-import Register from './Components/Register/Register';
+import Facerecognition from './Components/Facerecognition/Facerecognition.js';
+import Signin from './Components/Signin/Signin.js';
+import Register from './Components/Register/Register.js';
 
 
 
@@ -135,7 +135,7 @@ class App extends Component {
   }
   onbuttonsubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch('https://vast-coast-11346.herokuapp.com/imageurl', {
+    fetch('https://stark-reaches-72090.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -145,7 +145,7 @@ class App extends Component {
     .then(response => response.json())  
     .then(response => {
       if(response){
-        fetch('https://vast-coast-11346.herokuapp.com/image', {
+        fetch('https://stark-reaches-72090.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
