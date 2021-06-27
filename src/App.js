@@ -9,9 +9,6 @@ import Facerecognition from './Components/Facerecognition/Facerecognition.js';
 import Signin from './Components/Signin/Signin.js';
 import Register from './Components/Register/Register.js';
 
-// "serve": "^12.0.0",
-
-
 
 const particleoptions = {
   particles: {
